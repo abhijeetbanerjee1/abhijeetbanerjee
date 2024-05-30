@@ -1,0 +1,82 @@
+@import "../../App.scss";
+
+.skills {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+
+  @include mobile {
+    height: auto;
+  }
+
+  .split-hr {
+    display: none;
+    @include mobile {
+      display: block;
+      margin: 10px auto 20px auto;
+      width: 90%;
+      border: none;
+      border-top: 0.5px solid gray;
+    }
+  }
+
+  .wrapper {
+    text-align: center;
+    max-width: 1366px;
+    height: 100%;
+    margin: auto;
+
+    h1 {
+      font-size: 45px;
+      font-weight: 700;
+      color: orange;
+      letter-spacing: 3px;
+    }
+    h5 {
+      font-size: 20px;
+      color: #b8b8b8;
+    }
+
+    .intro {
+      color: #b8b8b8;
+      font-size: 18px;
+      letter-spacing: 0.5px;
+      line-height: 1.5em;
+      margin: 15px 0 15px 0;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    img {
+      height: 75px;
+      width: 75px;
+    }
+
+    .skill-icons {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      justify-content: center;
+      gap: 20px;
+
+      @include mobile {
+        width: 100%;
+        grid-template-columns: auto auto;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .skill-card {
+        background-color: #3b3b3b;
+        padding: 20px;
+        height: 150px;
+        width: 150px;
+        border-radius: 20px;
+      }
+    }
+  }
+}

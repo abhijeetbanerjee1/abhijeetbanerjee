@@ -1,0 +1,140 @@
+@import "../../App.scss";
+
+.workexp {
+  height: 100vh;
+
+  @include mobile {
+    height: auto;
+  }
+
+  .split-hr {
+    display: none;
+    @include mobile {
+      display: block;
+      margin: 50px auto 20px auto;
+      width: 90%;
+      border: none;
+      border-top: 0.5px solid gray;
+    }
+  }
+
+  .wrapper {
+    max-width: 1366px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      font-size: 45px;
+      font-weight: 700;
+      text-align: center;
+      color: orange;
+      letter-spacing: 3px;
+    }
+
+    .textContainer {
+      display: flex;
+      align-self: flex-end;
+      align-items: center;
+      gap: 10px;
+
+      @include mobile {
+        align-self: center;
+        text-align: center;
+        flex-direction: column;
+      }
+
+      p {
+        font-weight: 200;
+        font-size: 20px;
+        color: #b8b8b8;
+        text-align: right;
+      }
+      hr {
+        width: 200px;
+        border: none;
+        border-top: 0.5px solid gray;
+        @include mobile {
+          width: 300px;
+        }
+      }
+    }
+
+    .devdev {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 30px;
+
+      @include mobile {
+        align-self: center;
+        flex-direction: column;
+        padding: 10px 10px;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 0.5px solid gray;
+      }
+
+      .jobDesc {
+        display: flex;
+        // background-color: #3b3b3b;
+        // border: 1px solid #ccc;
+        border-radius: 20px;
+        // width: 50%;
+        // align-self: center;
+        padding: 10px 30px 20px 30px;
+
+        @include mobile {
+          width: 90%;
+        }
+
+        .job-title {
+          width: 50%;
+          @include mobile {
+            width: 100%;
+          }
+
+          h2 {
+            font-size: 30px;
+            font-weight: 600;
+            color: orange;
+
+            @include mobile {
+              font-size: 30px;
+            }
+          }
+
+          h3 {
+            font-size: 25px;
+            color: #b8b8b8;
+            @include mobile {
+              font-size: 20px;
+            }
+          }
+
+          p {
+            @include mobile {
+              font-size: 15px;
+            }
+          }
+        }
+        .job-description {
+          color: #b8b8b8;
+          letter-spacing: 0.5px;
+          @include mobile {
+            display: none;
+          }
+
+          .highlight {
+            font-weight: bold;
+            color: orange;
+          }
+        }
+      }
+    }
+  }
+}

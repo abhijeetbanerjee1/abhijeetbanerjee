@@ -1,0 +1,126 @@
+@import "../../App.scss";
+
+.hero {
+  height: calc(100vh - 100px);
+  overflow: hidden;
+  position: relative;
+
+  @include mobile {
+    height: auto;
+  }
+
+  .wrapper {
+    display: flex;
+    max-width: 1366px;
+    height: 100%;
+    margin: auto;
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    .textContainer {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
+
+      @include mobile {
+        height: 50%;
+        width: 100%;
+        gap: 5px;
+        align-items: center;
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 40px;
+        color: orange;
+        letter-spacing: 5px;
+      }
+
+      h1 {
+        font-size: 70px;
+        line-height: 50px;
+
+        @include mobile {
+          font-size: 36px;
+        }
+      }
+
+      .buttons {
+        button {
+          padding: 15px;
+          border: 1px solid white;
+          border-radius: 10px;
+          background-color: transparent;
+          color: white;
+          margin-left: 10px;
+          cursor: pointer;
+          font-weight: 500;
+        }
+      }
+
+      img {
+        width: 50px;
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .imageContainer {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+    @include mobile {
+      height: 100%;
+      width: 100%;
+      padding: 80px;
+    }
+
+    img {
+      width: 500px;
+      height: 500px;
+      object-fit: cover;
+      border: 5px solid rgba(255, 255, 255, 0.3);
+      animation: profile__animate 5s ease-in-out infinite 0s;
+
+      @include mobile {
+        height: 100%;
+        width: 100%;
+      }
+
+      @keyframes profile__animate {
+        0% {
+          border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+        }
+
+        50% {
+          border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+        }
+
+        100% {
+          border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+        }
+      }
+    }
+  }
+
+  // .slidingTextContainer {
+  //   position: absolute;
+  //   font-size: 50vh;
+  //   bottom: -120px;
+  //   white-space: nowrap;
+  //   color: #ffffff09;
+  //   width: 50%;
+  //   font-weight: bold;
+  // }
+}

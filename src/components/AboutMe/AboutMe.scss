@@ -1,0 +1,122 @@
+@import "../../App.scss";
+
+.aboutme {
+  height: 100vh;
+
+  @include mobile {
+    height: auto;
+  }
+
+  .split-hr {
+    display: none;
+    @include mobile {
+      display: block;
+      margin: 10px auto 20px auto;
+      width: 90%;
+      border: none;
+      border-top: 0.5px solid gray;
+    }
+  }
+
+  .wrapper {
+    max-width: 1366px;
+    height: 100%;
+    margin: auto;
+
+    h1 {
+      font-size: 45px;
+      font-weight: 700;
+      text-align: center;
+      color: orange;
+      letter-spacing: 3px;
+    }
+
+    div {
+      display: flex;
+      justify-content: center;
+
+      p {
+        margin: 20px;
+        width: 50%;
+        color: #b8b8b8;
+        font-weight: 200;
+        font-size: 20px;
+
+        @include mobile {
+          width: 100%;
+          text-align: justify;
+        }
+
+        .highlight {
+          font-weight: bold;
+          color: orange;
+        }
+      }
+
+      img {
+        margin-top: 25px;
+        height: 300px;
+        width: 300px;
+        border-radius: 30px;
+        overflow: hidden;
+
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+
+    .another-p {
+      p {
+        margin-top: 10px;
+        color: #b8b8b8;
+        width: 75%;
+        font-weight: 200;
+        font-size: 20px;
+
+        @include mobile {
+          width: 100%;
+        }
+
+        .highlight {
+          font-weight: bold;
+          color: orange;
+        }
+      }
+    }
+
+    .resume-download {
+      a {
+        background-color: lightgrey;
+        color: black;
+        padding: 5px 20px;
+        border-radius: 10px;
+      }
+    }
+
+    .quote {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      hr {
+        width: 450px;
+        border: none;
+        border-top: 0.5px solid gray;
+
+        @include mobile {
+          display: none;
+        }
+      }
+
+      p {
+        font-weight: 500;
+        font-size: 20px;
+        color: orange;
+        @include mobile {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
